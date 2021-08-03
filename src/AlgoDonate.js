@@ -6,21 +6,24 @@ class AlgoDonate extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			amount: "",
-			myAddress: "",
-			msg: "",
-			txID: "",
+			amount: "",			// The amount to be donated that is selected
+			myAddress: "",	// The address of the user (set once the user Connects to MyAlgo)
+			msg: "",				// The optional message the user can enter
+			txID: "",				// The transaction ID received after donating
 		};
 	}
 
+	// Initialize the Pipeline (get the wallet object that is needed later)
 	myAlgoWallet = Pipeline.init();
 
+	/** Called when a radio button is clicked */
 	handleAmountSelectionChange = (e) => {
 		this.setState({
 			amount: e.target.value
 		});
 	}
 
+	/** Called when the text in the message input field changes */
 	handleMessageChange= (e) => {
 		this.setState({
 			msg: e.target.value
@@ -30,7 +33,7 @@ class AlgoDonate extends Component {
 	render() {
 		return (
 			<div>
-				{/* Header */}
+				{/* Header and Algorand Icon */}
 				<Heading as={"h1"}>Donate <Algo color="black" /></Heading>
 				
 				{/* Show the Connect button if not already connected */}
@@ -93,7 +96,7 @@ class AlgoDonate extends Component {
 						<AlgoSendButton
 							recipient={this.props.receiverAddress}
 							amount={this.state.amount}
-							note={this.state.msg ? "Donation: " + this.state.msg : ""}
+							note={this.state.msg ? "Donation: " + this.state.msg : "" /* Prepend "Donation: " if the optional msg is set */}
 							myAddress={this.state.myAddress}
 							wallet={this.myAlgoWallet}
 							context={this}
