@@ -65,6 +65,13 @@ class AlgoDonate extends Component {
 						<Box>
 							<Field label="Amount" width={"100%"}>
 								<Radio
+									label="0.01 ALGO"
+									value={"10000"}
+									checked={this.state.amount === "10000"}
+									onChange={this.handleAmountSelectionChange}
+									required={true}
+								/>
+								<Radio
 									label="1 ALGO"
 									value={"1000000"}
 									checked={this.state.amount === "1000000"}
