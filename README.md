@@ -1,3 +1,6 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/721b42e3-2958-4327-bace-5b8e845ebb2c/deploy-status)](https://app.netlify.com/sites/algorand-donation-app/deploys)
+[[!License: MIT](https://img.shields.io/apm/l/atomic-design-ui.svg?)](LICENSE.txt)
+
 # A Donation App using Algorand and Pipeline-UI
 This Donation App uses Pipeline-UI to allow visitors of the website to donate Algo.
 
