@@ -4,7 +4,7 @@
 # A Donation App using Algorand and Pipeline-UI
 This Donation App uses Pipeline-UI to allow visitors of the website to donate Algo.
 
-Deployed version: ![https://algorand-donation-app.netlify.app/]
+Deployed version: https://algorand-donation-app.netlify.app/
 
 ## Security notice
 This project is **not** audited and should not be used in a production environment as is.
