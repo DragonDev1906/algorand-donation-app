@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Heading, Field, Radio, AlgoButton, Pipeline, Box, AlgoSendButton, Flash, Input, Button } from 'pipeline-ui';
+import { Heading, Field, Radio, AlgoButton, Pipeline, Box, AlgoSendButton, Flash, Input, Button, SwitchNet } from 'pipeline-ui';
 import { Algo } from "@pipeline-ui/icons"
 
 
@@ -59,6 +59,8 @@ class AlgoDonate extends Component {
 						returnTo={"myAddress"}
 					/>
 				}
+
+				<SwitchNet />
 
 				{/* Display the Form if connected */}
 				{this.state.myAddress &&
