@@ -46,6 +46,13 @@ class AlgoDonate extends Component {
 
 
 	render() {
+		let explorerBaseLink;
+		explorerBaseLink = (
+			Pipeline.main ? 
+			'https://algoexplorer.io/tx/' : 
+			'https://testnet.algoexplorer.io/tx/'
+		);
+		
 		return (
 			<div>
 				{/* Header and Algorand Icon */}
@@ -139,7 +146,7 @@ class AlgoDonate extends Component {
 						{this.state.txID &&
 							<Flash variant="success" mt={3} >
 								Thank you for your Donation.&nbsp;
-								<Flash.Link href={'https://algoexplorer.io/tx/' + this.state.txID} target="_blank">
+								<Flash.Link href={explorerBaseLink + this.state.txID} target="_blank">
 									Show in Explorer
 								</Flash.Link>
 							</Flash>
