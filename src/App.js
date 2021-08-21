@@ -8,6 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <Card bg={"#e8e8e8"} width={"auto"} maxWidth={"750px"} mx={"auto"} my={3} p={0} pb={3} px={3}>
+          {/* Success Message & Output Transaction ID */}
           <AlgoDonate 
             receiverAddress="FDASBUDD5B4YJEBZAYKWGFMF2VS7R2HC7A6UV52GGGLY6FNYDMOHXPYEJU"
           />
